@@ -1,0 +1,42 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Dice Game Exercise</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  
+  <link rel="stylesheet" type="text/css" href="dice.css">
+</head>
+
+<body>
+  <div class = container style = "float:left">
+        <div id = dice>
+         <br><br>
+          <h1 id = roll>6</h1>
+        </div><br>
+        <button onclick = diceRoll()>
+            Roll
+        </button>
+  </div>
+  <div class=container>
+        <p id = oneroll></p>
+        <p id = tworoll></p>
+        <p id = threeroll></p>
+        <p id = fourroll></p>
+        <p id = fiveroll></p>
+        <p id = sixroll></p>
+        <p id = totalrolled></p>
+  </div>
+  <script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js"></script>
+  <script src="dice.js"></script>
+  <script>
+    <!-- JS on the page -->
+  </script>
+</body>
+</html>
