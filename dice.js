@@ -4,7 +4,11 @@ var totalRoll = 0;
 var previousroll = 0;
 var streak = 1;
 var diceRoll = function(){
-    for (var i = 0; i < 10000; i++){
+    if (document.getElementById('numrolls').value > 10000 || document.getElementById('numrolls').value < 1){
+        alert("Please resubmit number of rolls between 1 and 10,000.");
+        return false;
+    }
+    for (var i = 0; i < document.getElementById('numrolls').value; i++){
         var rolled = Math.floor(Math.random()*6)+1;
         document.getElementById('roll').innerHTML = rolled;
         
@@ -28,8 +32,8 @@ var diceRoll = function(){
         
         //Prints to the HTML the number of times each individual roll took place
         for (var j = 0; j < diceArray.length; j++){
-            document.getElementById(diceArray[j][2]).innerHTML = "You have rolled a " + diceArray[j][0] + " " + diceArray[j][1] + " times (" + (diceArray[j][1]/(totalRoll)*100).toFixed(2) + "%) and longest streak is " + diceArray[j][3] + ".";
+            document.getElementById(diceArray[j][2]).innerHTML = "<td>" + diceArray[j][0] + "</td><td>" + diceArray[j][1].toLocaleString('en-US', {minimumFractionDigits:0}) + "</td><td>" + (diceArray[j][1]/(totalRoll)*100).toFixed(2) + "%</td><td>" + diceArray[j][3] + "</td>";
         }
     }
-    document.getElementById('totalrolled').innerHTML = "You have rolled a total of " + totalRoll + " times.";
+    document.getElementById('totalrolled').innerHTML = "<td>Total</td><td>" + totalRoll.toLocaleString('en-US', {minimumFractionDigits:0}) + "</td><td>100%</td><td>--</td>";
 }

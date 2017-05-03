@@ -1,0 +1,101 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Dice Game Exercise</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  
+  <link rel="stylesheet" type="text/css" href="dice.css">
+</head>
+
+<body>
+ <div class="bigcontainer">
+     <h1>Dice Simulator</h1>
+    <p>The purpose of this simulator is to observe how many times a certain roll has been made on a larger scale. Statistics including percentage to total rolls as well as longest streaks are included.</p>
+      <div class = container>
+            <div id = dice>
+             <br><br>
+              <h1 id = roll>6</h1>
+            </div><br>
+            <button onclick = diceRoll()>
+                Roll
+            </button>
+            <br>
+            <br>
+            <label for="numrolls">Dice Rolls:</label>
+            <input id = "numrolls" type="text" placeholder="Enter b/w 1 and 10,000">
+      </div>
+      <div class=container>
+           <table>
+              <tr>
+                  <th colspan="4">Dice Data</th>
+              </tr>
+               <tr>
+                   <th>Dice #</th>
+                   <th>Amount</th>
+                   <th>Percent</th>
+                   <th>Streak</th>
+               </tr>
+               <tr id = oneroll>
+                   <td>1</td>
+                   <td>0</td>
+                   <td>0.00%</td>
+                   <td>0</td>
+               </tr>
+               <tr id = tworoll>
+                   <td>2</td>
+                   <td>0</td>
+                   <td>0.00%</td>
+                   <td>0</td>
+                </tr>
+               <tr id = threeroll>
+                   <td>3</td>
+                   <td>0</td>
+                   <td>0.00%</td>
+                   <td>0</td>
+                </tr>
+               <tr id = fourroll>
+                   <td>4</td>
+                   <td>0</td>
+                   <td>0.00%</td>
+                   <td>0</td>
+                </tr>
+               <tr id = fiveroll>
+                   <td>5</td>
+                   <td>0</td>
+                   <td>0.00%</td>
+                   <td>0</td>
+                </tr>
+               <tr id = sixroll>
+                   <td>6</td>
+                   <td>0</td>
+                   <td>0.00%</td>
+                   <td>0</td>
+                </tr>
+                <tr id = totalrolled>
+                    <td>Total</td>
+                    <td>0</td>
+                    <td>0.00%</td>
+                    <td>--</td>
+                </tr>
+           </table>
+            <p id = totalrolled></p>
+            <p>Percent = <ins>(Number of Specific Roll)</ins> x 100    (Total Rolls)</p>
+            <p>Streak = Longest consecutive rolls for a specific number</p>
+            <br>
+            
+      </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js"></script>
+  <script src="dice.js"></script>
+  <script>
+    <!-- JS on the page -->
+  </script>
+</body>
+</html>
